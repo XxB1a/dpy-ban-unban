@@ -16,6 +16,7 @@ async def unban(ctx, id: int = None):
     else:
         if len(str(id)) == 18:
             user = await bot.fetch_user(id)
+            
             await ctx.guild.unban(user)
             await ctx.send(f'Unbanned **{id}**! Welcome back buddy!')
 
